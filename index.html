@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Meghna ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,7 +17,9 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 background:linear-gradient(135deg,#ffdde1,#ee9ca7);
@@ -37,13 +41,30 @@ position:relative;
 .hero{
 background:
 linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-url(<img src="meghna1.jpg">);
+url('meghna1.jpg');
+
 background-size:cover;
 background-position:center;
 }
 
-.hero h1{font-size:4rem;margin-bottom:10px;}
-.hero h2{font-weight:300;}
+.hero h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-weight:300;
+}
+
+#countdown{
+margin-top:25px;
+font-size:2rem;
+font-weight:700;
+background:rgba(255,255,255,.15);
+padding:15px 30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
 
 .btn{
 margin-top:30px;
@@ -59,14 +80,17 @@ text-decoration:none;
 transition:.3s;
 }
 
-.btn:hover{transform:scale(1.08);}
+.btn:hover{
+transform:scale(1.08);
+}
 
 .section-title{
 font-size:3rem;
 margin-bottom:20px;
 }
 
-.gallery,.memory-gallery{
+.gallery,
+.memory-gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
@@ -74,7 +98,8 @@ width:100%;
 max-width:1100px;
 }
 
-.gallery img,.memory-gallery img{
+.gallery img,
+.memory-gallery img{
 width:100%;
 height:320px;
 object-fit:cover;
@@ -82,7 +107,9 @@ border-radius:15px;
 transition:.4s;
 }
 
-.gallery img:hover{transform:scale(1.05);}
+.gallery img:hover{
+transform:scale(1.05);
+}
 
 .card{
 background:rgba(255,255,255,.15);
@@ -98,7 +125,10 @@ border-radius:20px;
 background:rgba(255,255,255,.15);
 }
 
-audio{margin-top:10px;width:250px;}
+audio{
+margin-top:10px;
+width:250px;
+}
 
 .surprise-btn{
 padding:18px 45px;
@@ -126,7 +156,9 @@ transition:.4s;
 z-index:999;
 }
 
-.popup.show{transform:translate(-50%,-50%) scale(1);}
+.popup.show{
+transform:translate(-50%,-50%) scale(1);
+}
 
 .overlay{
 position:fixed;
@@ -148,9 +180,37 @@ animation:float 7s linear infinite;
 }
 
 @keyframes float{
-0%{transform:translateY(0);opacity:0;}
-10%{opacity:1;}
-100%{transform:translateY(-110vh);opacity:0;}
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.7rem;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+#countdown{
+font-size:1.4rem;
+}
+
 }
 
 </style>
@@ -161,116 +221,291 @@ animation:float 7s linear infinite;
 <div class="overlay" id="overlay"></div>
 
 <div class="popup" id="popup">
+
 <h2>Happy Birthday Pagli ❤️</h2>
+
 <p>
-Dear Meghna,<br><br>
 
-You are the most beautiful part of my life. Being with you always feels really special to me. You make my life happier in so many ways. <br>
-I don't know what will happen in the future, but I really want you to stay with me in every part of my life.<br><br>
-So I just want to ask you, do you want to stay with me for a long time, maybe for a lifetime?<br>
-Will you love me always, even when things are not perfect?<br><br>
+Dear Meghna,
 
-Happy Birthday ❤️<br><br>
+<br><br>
 
-Forever Yours,<br>
+You are the most beautiful part of my life.
+Being with you always feels really special to me.
+You make my life happier in so many ways.
+
+<br><br>
+
+I don't know what will happen in the future,
+but I really want you to stay with me in every part of my life.
+
+<br><br>
+
+So I just want to ask you,
+do you want to stay with me for a long time,
+maybe for a lifetime?
+
+<br><br>
+
+Will you love me always,
+even when things are not perfect?
+
+<br><br>
+
+Happy Birthday ❤️
+
+<br><br>
+
+Forever Yours,
+<br>
 Md Yeasin Arafat
+
 </p>
+
 </div>
 
 <section class="hero">
+
 <h1>Happy Birthday Meghna ❤️</h1>
+
 <h2>A Special Surprise</h2>
 
-<a href="#gallery" class="btn">Open My Gift 🎁</a>
+<div id="countdown">
+Loading Countdown...
+</div>
+
+<a href="#gallery" class="btn">
+Open My Gift 🎁
+</a>
+
 </section>
 
 <section id="gallery">
-<h2 class="section-title">Beautiful Meghna 🌸</h2>
+
+<h2 class="section-title">
+Beautiful Meghna 🌸
+</h2>
 
 <div class="gallery">
+
 <img src="meghna1.jpg">
 <img src="meghna2.jpg">
 <img src="meghna3.jpg">
+
 </div>
-</div>
+
 </section>
 
 <section>
-<h2 class="section-title">Our Memories ❤️</h2>
+
+<h2 class="section-title">
+Our Memories ❤️
+</h2>
 
 <div class="memory-gallery">
+
 <img src="memory1.jpg">
 <img src="memory2.jpg">
 <img src="memory3.jpg">
 <img src="memory4.jpg">
+
 </div>
+
 </section>
 
 <section>
-<h2 class="section-title">Our Song 🎵</h2>
+
+<h2 class="section-title">
+Our Song 🎵
+</h2>
 
 <div class="music-box">
+
 <h3>Play Our Song ❤️</h3>
 
 <audio controls loop>
 <source src="song.mp3" type="audio/mpeg">
 </audio>
+
 </div>
+
 </section>
 
 <section>
-  <h2 class="section-title">A Letter 💌</h2>
 
-  <div class="card">
-    <p>
-      Happy Birthday Meghna 💖<br><br>
+<h2 class="section-title">
+A Letter 💌
+</h2>
 
-      You mean everything to me.<br>
-      From the moment you came into my life, everything felt more beautiful and meaningful.<br><br>
+<div class="card">
 
-      I don’t know how to explain it properly, but you make my world peaceful just by existing.<br>
-      Your smile is my favorite place, and your presence feels like home.<br><br>
+<p>
 
-      I may not be perfect, but my love for you is real, deep, and forever growing.<br>
-      I promise to stay by your side in every situation—good or bad.<br><br>
+Happy Birthday Meghna 💖
 
-      If I had one wish, it would be to see you happy every single day of your life.<br>
-      Because your happiness is more important to me than anything else in this world.<br><br>
+<br><br>
 
-      I love you more than words can ever describe 💕<br>
-      Forever Yours Bebu ❤️<br>
-      Md Yeasin Arafat
-    </p>
-  </div>
+You mean everything to me.
+
+<br><br>
+
+From the moment you came into my life,
+everything felt more beautiful and meaningful.
+
+<br><br>
+
+I don’t know how to explain it properly,
+but you make my world peaceful just by existing.
+
+<br><br>
+
+Your smile is my favorite place,
+and your presence feels like home.
+
+<br><br>
+
+I may not be perfect,
+but my love for you is real,
+deep, and forever growing.
+
+<br><br>
+
+I promise to stay by your side in every situation,
+good or bad.
+
+<br><br>
+
+If I had one wish,
+it would be to see you happy every single day of your life.
+
+<br><br>
+
+Because your happiness is more important to me
+than anything else in this world.
+
+<br><br>
+
+I love you more than words can ever describe 💕
+
+<br><br>
+
+Forever Yours Bebu ❤️
+
+<br>
+Md Yeasin Arafat
+
+</p>
+
+</div>
+
 </section>
 
 <section>
-<h2 class="section-title">Final Surprise 🎁</h2>
 
-<button class="surprise-btn" onclick="openPopup()">Click Here ❤️</button>
+<h2 class="section-title">
+Final Surprise 🎁
+</h2>
+
+<button class="surprise-btn" onclick="openPopup()">
+Click Here ❤️
+</button>
+
 </section>
 
 <script>
 
+// Countdown
+
+const targetDate = new Date("June 12, 2026 00:00:00").getTime();
+
+function updateCountdown(){
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+if(distance <= 0){
+
+document.getElementById("countdown").innerHTML =
+"🎉 Happy Birthday Meghna ❤️ 🎂";
+
+return;
+}
+
+const days = Math.floor(distance / (1000*60*60*24));
+
+const hours = Math.floor(
+(distance % (1000*60*60*24))
+/
+(1000*60*60)
+);
+
+const minutes = Math.floor(
+(distance % (1000*60*60))
+/
+(1000*60)
+);
+
+const seconds = Math.floor(
+(distance % (1000*60))
+/
+1000
+);
+
+document.getElementById("countdown").innerHTML =
+`${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+// Popup
+
 function openPopup(){
-document.getElementById('popup').classList.add('show');
-document.getElementById('overlay').classList.add('show');
+
+document.getElementById('popup')
+.classList.add('show');
+
+document.getElementById('overlay')
+.classList.add('show');
+
 }
 
 document.getElementById('overlay').onclick=function(){
-document.getElementById('popup').classList.remove('show');
-document.getElementById('overlay').classList.remove('show');
+
+document.getElementById('popup')
+.classList.remove('show');
+
+document.getElementById('overlay')
+.classList.remove('show');
+
 };
 
-// floating hearts
+// Floating Hearts
+
 setInterval(()=>{
+
 let h=document.createElement("div");
+
 h.className="heart";
+
 h.innerHTML="❤️";
+
 h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(Math.random()*20+10)+"px";
+
+h.style.fontSize=
+(Math.random()*20+10)+"px";
+
 document.body.appendChild(h);
-setTimeout(()=>h.remove(),7000);
+
+setTimeout(()=>{
+
+h.remove();
+
+},7000);
+
 },300);
 
 </script>
