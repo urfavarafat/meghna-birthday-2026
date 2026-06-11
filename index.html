@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -16,9 +15,7 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
 background:linear-gradient(135deg,#ffdde1,#ee9ca7);
@@ -45,16 +42,8 @@ background-size:cover;
 background-position:center;
 }
 
-.hero h1{
-font-size:4rem;
-margin-bottom:10px;
-animation:fadeDown 1.5s ease;
-}
-
-.hero h2{
-font-weight:300;
-animation:fadeUp 1.8s ease;
-}
+.hero h1{font-size:4rem;margin-bottom:10px;}
+.hero h2{font-weight:300;}
 
 .btn{
 margin-top:30px;
@@ -66,81 +55,50 @@ border:none;
 border-radius:50px;
 cursor:pointer;
 font-size:18px;
-transition:.3s;
 text-decoration:none;
+transition:.3s;
 }
 
-.btn:hover{
-transform:scale(1.08);
-}
-
-.card{
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(15px);
-padding:30px;
-border-radius:20px;
-max-width:900px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
+.btn:hover{transform:scale(1.08);}
 
 .section-title{
 font-size:3rem;
 margin-bottom:20px;
 }
 
-.gallery{
+.gallery,.memory-gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 width:100%;
 max-width:1100px;
 }
 
-.gallery img{
+.gallery img,.memory-gallery img{
 width:100%;
-height:350px;
-object-fit:cover;
-border-radius:20px;
-transition:.4s;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-.memory-gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-width:100%;
-max-width:1200px;
-}
-
-.memory-gallery img{
-width:100%;
-height:300px;
+height:320px;
 object-fit:cover;
 border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{transform:scale(1.05);}
+
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+max-width:800px;
 }
 
 .music-box{
 padding:25px;
 border-radius:20px;
 background:rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
 }
 
-audio{
-width:300px;
-margin-top:15px;
-}
-
-.letter{
-font-size:1.2rem;
-line-height:2;
-max-width:800px;
-}
+audio{margin-top:10px;width:250px;}
 
 .surprise-btn{
 padding:18px 45px;
@@ -162,21 +120,13 @@ background:white;
 color:#333;
 padding:40px;
 border-radius:25px;
-max-width:600px;
+max-width:500px;
 width:90%;
+transition:.4s;
 z-index:999;
-transition:.5s;
-box-shadow:0 20px 60px rgba(0,0,0,.3);
 }
 
-.popup.show{
-transform:translate(-50%,-50%) scale(1);
-}
-
-.popup h2{
-color:#ff4f81;
-margin-bottom:15px;
-}
+.popup.show{transform:translate(-50%,-50%) scale(1);}
 
 .overlay{
 position:fixed;
@@ -184,7 +134,6 @@ inset:0;
 background:rgba(0,0,0,.6);
 opacity:0;
 pointer-events:none;
-transition:.4s;
 }
 
 .overlay.show{
@@ -195,340 +144,115 @@ pointer-events:auto;
 .heart{
 position:fixed;
 bottom:-20px;
-color:white;
-animation:float 8s linear infinite;
-opacity:.7;
-z-index:0;
-}
-
-.countdown{
-font-size:2rem;
-font-weight:700;
-margin-top:20px;
+animation:float 7s linear infinite;
 }
 
 @keyframes float{
-0%{
-transform:translateY(0) rotate(0);
-opacity:0;
-}
-10%{
-opacity:1;
-}
-100%{
-transform:translateY(-110vh) rotate(360deg);
-opacity:0;
-}
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.6rem;
-}
-
-.section-title{
-font-size:2rem;
-}
-
+0%{transform:translateY(0);opacity:0;}
+10%{opacity:1;}
+100%{transform:translateY(-110vh);opacity:0;}
 }
 
 </style>
 </head>
+
 <body>
 
 <div class="overlay" id="overlay"></div>
 
 <div class="popup" id="popup">
 <h2>Happy Birthday Meghna ❤️</h2>
-
 <p>
-Dear Meghna,
-
-No matter where life takes us,
-I will always be grateful for every smile,
-every memory and every moment spent with you.
-
-You are one of the most beautiful parts of my life.
-
-Happy Birthday My Love ❤️
-
-<br><br>
-
+Dear Meghna,<br><br>
+You are the most beautiful part of my life.<br>
+Happy Birthday ❤️<br><br>
 Forever Yours,<br>
 Md Yeasin Arafat
 </p>
-
 </div>
 
 <section class="hero">
-
 <h1>Happy Birthday Meghna ❤️</h1>
+<h2>A Special Surprise</h2>
 
-<h2>A Special Surprise From<br>Md Yeasin Arafat</h2>
-
-<div class="countdown" id="countdown"></div>
-
-<a href="#gallery" class="btn">
-Open My Gift 🎁
-</a>
-
+<a href="#gallery" class="btn">Open My Gift 🎁</a>
 </section>
 
 <section id="gallery">
-
-<h2 class="section-title">
-Beautiful Meghna 🌸
-</h2>
+<h2 class="section-title">Beautiful Meghna 🌸</h2>
 
 <div class="gallery">
-
 <img src="images/meghna1.jpg">
 <img src="images/meghna2.jpg">
 <img src="images/meghna3.jpg">
-
 </div>
-
 </section>
 
 <section>
-
-<h2 class="section-title">
-Our Memories ❤️
-</h2>
-
-<p style="margin-bottom:25px;">
-Just upload photos into the images folder.
-</p>
+<h2 class="section-title">Our Memories ❤️</h2>
 
 <div class="memory-gallery">
-
 <img src="images/memory1.jpg">
 <img src="images/memory2.jpg">
 <img src="images/memory3.jpg">
 <img src="images/memory4.jpg">
-<img src="images/memory5.jpg">
-<img src="images/memory6.jpg">
-
 </div>
-
 </section>
 
 <section>
-
-<h2 class="section-title">
-Our Song 🎵
-</h2>
+<h2 class="section-title">Our Song 🎵</h2>
 
 <div class="music-box">
+<h3>Play Our Song ❤️</h3>
 
-<h3>Play Our Special Song ❤️</h3>
-
-<audio controls autoplay loop>
-<source src="music/song.mp3" type="audio/mpeg">
+<audio controls loop>
+<source src="song.mp3" type="audio/mpeg">
 </audio>
-
-<p style="margin-top:15px;">
-Upload your song as:
-music/song.mp3
-</p>
-
 </div>
-
 </section>
 
 <section>
-
-<h2 class="section-title">
-A Letter For You 💌
-</h2>
+<h2 class="section-title">A Letter 💌</h2>
 
 <div class="card">
-
-<p class="letter">
-
-Happy Birthday, Meghna Hannan ❤️
-
-<br><br>
-
-Every moment spent with you has become a precious memory in my life.
-
-Your smile brightens my darkest days and your presence makes everything beautiful.
-
-On your special day, I wish you endless happiness, good health and all the success you deserve.
-
-Thank you for being such an important part of my journey.
-
-May your dreams come true and your heart always stay full of joy.
-
-<br><br>
-
-Forever Yours ❤️
-
-<br>
-
+<p>
+Happy Birthday Meghna ❤️<br><br>
+You mean everything to me.<br>
+Thank you for being in my life.<br><br>
+Forever Yours ❤️<br>
 Md Yeasin Arafat
-
 </p>
-
 </div>
-
 </section>
 
 <section>
+<h2 class="section-title">Final Surprise 🎁</h2>
 
-<h2 class="section-title">
-Final Surprise 🎁
-</h2>
-
-<button class="surprise-btn" onclick="openPopup()">
-Click Here My Love ❤️
-</button>
-
+<button class="surprise-btn" onclick="openPopup()">Click Here ❤️</button>
 </section>
 
 <script>
 
-function createHeart(){
-
-const heart=document.createElement('div');
-
-heart.classList.add('heart');
-
-heart.innerHTML='❤️';
-
-heart.style.left=Math.random()*100+'vw';
-
-heart.style.fontSize=
-(Math.random()*25+15)+'px';
-
-heart.style.animationDuration=
-(Math.random()*4+5)+'s';
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},9000);
-
-}
-
-setInterval(createHeart,300);
-
 function openPopup(){
-
-document.getElementById('popup')
-.classList.add('show');
-
-document.getElementById('overlay')
-.classList.add('show');
-
-confetti();
-
+document.getElementById('popup').classList.add('show');
+document.getElementById('overlay').classList.add('show');
 }
 
-document.getElementById('overlay')
-.addEventListener('click',()=>{
+document.getElementById('overlay').onclick=function(){
+document.getElementById('popup').classList.remove('show');
+document.getElementById('overlay').classList.remove('show');
+};
 
-document.getElementById('popup')
-.classList.remove('show');
-
-document.getElementById('overlay')
-.classList.remove('show');
-
-});
-
-function confetti(){
-
-for(let i=0;i<120;i++){
-
-let c=document.createElement("div");
-
-c.style.position="fixed";
-c.style.left=Math.random()*100+"vw";
-c.style.top="-10px";
-c.style.width="10px";
-c.style.height="10px";
-c.style.background=
-`hsl(${Math.random()*360},100%,60%)`;
-
-c.style.zIndex="1000";
-c.style.borderRadius="50%";
-c.style.transition="4s linear";
-
-document.body.appendChild(c);
-
-setTimeout(()=>{
-c.style.transform=
-`translateY(${window.innerHeight+200}px)
-rotate(720deg)`;
-},50);
-
-setTimeout(()=>{
-c.remove();
-},4500);
-
-}
-
-}
-
-const targetDate =
-new Date("June 12, 2026 00:00:00").getTime();
-
+// floating hearts
 setInterval(()=>{
-
-const now=new Date().getTime();
-
-const distance=targetDate-now;
-
-const hours=
-Math.floor((distance%(1000*60*60*24))
-/(1000*60*60));
-
-const minutes=
-Math.floor((distance%(1000*60*60))
-/(1000*60));
-
-const seconds=
-Math.floor((distance%(1000*60))/1000);
-
-if(distance>0){
-
-document.getElementById("countdown")
-.innerHTML=
-`${hours}h ${minutes}m ${seconds}s`;
-
-}else{
-
-document.getElementById("countdown")
-.innerHTML=
-"🎂 It's Meghna's Birthday 🎂";
-
-}
-
-},1000);
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},300);
 
 </script>
 
